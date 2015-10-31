@@ -13,8 +13,10 @@ RUN apt-get update -qqy && apt-get install -qqy \
 
 RUN curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
 RUN git clone https://github.com/torch/distro.git torch --recursive
-RUN bash torch/install.sh
+WORKDIR /code/torch
+RUN bash install.sh
 ENV PATH=$PATH:/code/torch/install/bin/
+WORKDIR /code
 
 RUN luarocks install loadcaffe
 
