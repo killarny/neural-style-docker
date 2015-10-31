@@ -31,6 +31,4 @@ RUN /code/torch/install/bin/luarocks install cutorch
 RUN /code/torch/install/bin/luarocks install cunn
 
 WORKDIR /code/neural-style
-#RUN sed -i '43d' loadcaffe_wrapper.lua
-#RUN sed -i '41d' loadcaffe_wrapper.lua
 CMD ["/bin/bash"]
