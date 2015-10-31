@@ -1,0 +1,4 @@
+neural-style:
+  build: .
+  volumes:
+    - .:/media/neural-style
