@@ -30,7 +30,8 @@ RUN luarocks install loadcaffe
 #RUN luarocks install cunn
 
 RUN git clone https://github.com/jcjohnson/neural-style.git
-RUN sh neural-style/models/download_models.sh
 
 WORKDIR /code/neural-style
+RUN sh models/download_models.sh
+
 CMD ["/bin/bash"]
